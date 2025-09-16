@@ -63,60 +63,56 @@ While the whitepaper provides strong mathematical arguments, this project comple
    ```bash
    git clone https://github.com/YOUR_USERNAME/alpenglow-formal-verification.git
    cd alpenglow-formal-verification
-Download TLC
 
-bash
-Copy code
-wget https://github.com/tlaplus/tlaplus/releases/download/v1.8.0/tla2tools.jar
-Run verification (small model example)
+## Download TLC
+    wget https://github.com/tlaplus/tlaplus/releases/download/v1.8.0/tla2tools.jar
 
-bash
-Copy code
-python scripts/run_tlc.py --model models/small_model.cfg
-##🔬 Verification Results
+## Run Verification (Small Model Example)
+    python scripts/run_tlc.py --model models/small_model.cfg
 
-| Property                            | Status     | Notes                                                     |
-| ----------------------------------- | ---------- | --------------------------------------------------------- |
-| Safety: No conflicting finalization | ✅ Verified | Holds under ≤20% Byzantine stake                          |
-| Safety: Chain consistency           | ✅ Verified | Honest nodes agree on finalized chain                     |
-| Safety: Certificate uniqueness      | ✅ Verified | No equivocation possible                                  |
-| Liveness: Progress                  | ⚠️ Partial | Holds with >60% responsive stake, fails during partitions |
-| Liveness: Fast path completion      | ✅ Verified | Completes in one round with >80% responsive stake         |
-| Resilience: 20+20 tolerance         | ✅ Verified | Safety maintained under advertised conditions             |
+---
 
+## 🔬 Verification Results
 
-📋 Key Theorems Verified
-No two conflicting blocks can be finalized in the same slot
+| Property                | Status     | Notes                                                                 |
+|--------------------------|------------|----------------------------------------------------------------------|
+| Safety: No conflicting finalization | ✅ Verified | Holds under ≤20% Byzantine stake                                      |
+| Safety: Chain consistency           | ✅ Verified | Honest nodes agree on finalized chain                                 |
+| Safety: Certificate uniqueness      | ✅ Verified | No equivocation possible                                              |
+| Liveness: Progress                  | ⚠️ Partial | Holds with >60% responsive stake, fails during partitions             |
+| Liveness: Fast path completion      | ✅ Verified | Completes in one round with >80% responsive stake                     |
+| Resilience: 20+20 tolerance         | ✅ Verified | Safety maintained under advertised conditions                         |
 
-Chain consistency under ≤20% Byzantine stake
+---
 
-Certificate uniqueness (no equivocation)
+## 📋 Key Theorems Verified
+- No two conflicting blocks can be finalized in the same slot  
+- Chain consistency under ≤20% Byzantine stake  
+- Certificate uniqueness (no equivocation)  
+- Progress under partial synchrony with >60% honest stake  
+- Fast-path finalization in one round with >80% stake  
+- Bounded finalization time: `min(δ₈₀%, 2δ₆₀%)`  
 
-Progress under partial synchrony with >60% honest stake
+---
 
-Fast-path finalization in one round with >80% stake
+## 👥 Contributing
+Contributions are welcome! You can:  
+- Report issues or bugs  
+- Suggest model improvements  
+- Add new properties or specifications  
+- Improve documentation  
 
-Bounded finalization time: min(δ₈₀%, 2δ₆₀%)
+This project is licensed under **Apache 2.0**.  
 
-👥 Contributing
-Contributions are welcome! You can:
+---
 
-Report issues or bugs
+## 🔗 References
+- [Solana Alpenglow Whitepaper](#)  
+- [TLA+ Official Website](https://lamport.azurewebsites.net/tla/tla.html)  
+- [Practical TLA+ (Hillel Wayne)](https://www.hillelwayne.com/post/practical-tla/)  
 
-Suggest model improvements
+---
 
-Add new properties or specifications
-
-Improve documentation
-
-This project is licensed under Apache 2.0.
-
-🔗 References
-Solana Alpenglow Whitepaper
-
-TLA+ Official Website
-
-Practical TLA+ (Hillel Wayne)
-
-📧 Contact
+## 📧 Contact
 For questions or discussion, please open an issue.
+
