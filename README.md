@@ -55,7 +55,7 @@ While the whitepaper provides strong mathematical arguments, this project comple
 ### Prerequisites
 - Java Runtime Environment (JRE) for **TLC**
 - Python 3.x (for automation scripts)
-- [TLA+ Toolbox](https://lamport.azurewebsites.net/tla/toolbox.html) *(optional, for editing)*
+- [TLA+ Toolbox](https://lamport.azurewebsites.net/tla/toolbox.html) 
 
 ### Running Verification
 
@@ -107,7 +107,7 @@ This project is licensed under **Apache 2.0**.
 ---
 
 ## 🔗 References
-- [Solana Alpenglow Whitepaper](#)  
+- [Solana Alpenglow Whitepaper](https://drive.google.com/file/d/1Rlr3PdHsBmPahOInP6-Pl0bMzdayltdV/view)  
 - [TLA+ Official Website](https://lamport.azurewebsites.net/tla/tla.html)  
 - [Practical TLA+ (Hillel Wayne)](https://www.hillelwayne.com/post/practical-tla/)  
 
