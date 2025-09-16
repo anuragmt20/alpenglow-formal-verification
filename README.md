@@ -73,7 +73,8 @@ Run verification (small model example)
 bash
 Copy code
 python scripts/run_tlc.py --model models/small_model.cfg
-🔬 Verification Results
+##🔬 Verification Results
+
 | Property                            | Status     | Notes                                                     |
 | ----------------------------------- | ---------- | --------------------------------------------------------- |
 | Safety: No conflicting finalization | ✅ Verified | Holds under ≤20% Byzantine stake                          |
