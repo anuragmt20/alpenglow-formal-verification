@@ -1,0 +1,33 @@
+# TLA+ and TLC artifacts
+*.tla
+*.cfg
+*.out
+*.log
+*.tex
+*.pdf
+*.class
+
+# Java
+*.class
+tla2tools.jar
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Results data (keep only summary files)
+/models/results/*.json
+!/models/results/README.md
+
+# Large simulation data
+/simulations/
