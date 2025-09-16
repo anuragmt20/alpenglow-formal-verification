@@ -74,13 +74,15 @@ bash
 Copy code
 python scripts/run_tlc.py --model models/small_model.cfg
 🔬 Verification Results
-Property	Status	Notes
-Safety: No conflicting finalization	✅ Verified	Holds under ≤20% Byzantine stake
-Safety: Chain consistency	✅ Verified	Honest nodes agree on finalized chain
-Safety: Certificate uniqueness	✅ Verified	No equivocation possible
-Liveness: Progress	⚠️ Partial	Holds with >60% responsive stake, fails during partitions
-Liveness: Fast path completion	✅ Verified	Completes in one round with >80% responsive stake
-Resilience: 20+20 tolerance	✅ Verified	Safety maintained under advertised conditions
+| Property                            | Status     | Notes                                                     |
+| ----------------------------------- | ---------- | --------------------------------------------------------- |
+| Safety: No conflicting finalization | ✅ Verified | Holds under ≤20% Byzantine stake                          |
+| Safety: Chain consistency           | ✅ Verified | Honest nodes agree on finalized chain                     |
+| Safety: Certificate uniqueness      | ✅ Verified | No equivocation possible                                  |
+| Liveness: Progress                  | ⚠️ Partial | Holds with >60% responsive stake, fails during partitions |
+| Liveness: Fast path completion      | ✅ Verified | Completes in one round with >80% responsive stake         |
+| Resilience: 20+20 tolerance         | ✅ Verified | Safety maintained under advertised conditions             |
+
 
 📋 Key Theorems Verified
 No two conflicting blocks can be finalized in the same slot
